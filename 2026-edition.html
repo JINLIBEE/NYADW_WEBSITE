@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Traces of Force Exhibition | NYADW 2026</title>
+<meta name="description" content="Explore nine works spanning architecture, painting, photography, installation, and furniture design in the inaugural Physical edition of New York Asian Design Week." />
+<!-- RSVP_URL: https://luma.com/krzzq87u -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          paper: '#F2F2F0',
+          ash: '#D9D9D7',
+          stone: '#BFBFBF',
+          midgrey: '#8F8F8F',
+          graphite: '#595959',
+          charcoal: '#2D2D2D',
+          inkblack: '#0A0A0A',
+        },
+        fontFamily: {
+          sans: ['IBM Plex Sans', 'Noto Sans SC', 'Arial', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{
+    --paper:#F2F2F0; --ash:#D9D9D7; --stone:#BFBFBF; --midgrey:#8F8F8F;
+    --graphite:#595959; --charcoal:#2D2D2D; --black:#0A0A0A;
+    --t:0.45s; --ease:cubic-bezier(0.25,0,0.272,.994);
+  }
+  *{ box-sizing:border-box; }
+  html{ font-size:clamp(14px, 0.8333333333vw, 19px); scroll-behavior:smooth; }
+  body{
+    margin:0; padding:0; background:var(--paper); color:var(--charcoal);
+    font-family:'IBM Plex Sans','Noto Sans SC',sans-serif; font-weight:300;
+    font-size:1rem; line-height:1.5; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden; -ms-overflow-style:none; scrollbar-width:none;
+  }
+  body::-webkit-scrollbar{ display:none; }
+  ::selection{ background:var(--charcoal); color:var(--paper); }
+  a{ color:inherit; text-decoration:none; }
+  .f-display{ font-family:'Archivo',sans-serif; font-weight:400; letter-spacing:0.01em; }
+  .f-mono{ font-family:'IBM Plex Mono',monospace; letter-spacing:.08em; }
+  .label{ font-family:'IBM Plex Mono',monospace; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--midgrey); }
+  #siteHeader{ background:transparent; color:var(--charcoal); }
+  #siteHeader.scrolled{ background:rgba(242,242,240,.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--ash); }
+  .nav-link{ position:relative; transition:opacity var(--t) var(--ease); font-family:'IBM Plex Sans',sans-serif; }
+  .nav-link::after{ content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform var(--t) var(--ease); }
+  .nav-link:hover::after{ transform:scaleX(1); transform-origin:left; }
+  .nav-link.is-active::after{ transform:scaleX(1); transform-origin:left; }
+  .pill-btn{ display:inline-flex; align-items:center; gap:.5rem; border-radius:999px; padding:.85rem 1.6rem; font-family:'IBM Plex Mono',monospace; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; transition:transform var(--t) var(--ease), background-color var(--t) var(--ease), color var(--t) var(--ease); }
+  .pill-btn:hover{ transform:translateY(-2px); }
+  .pill-btn:active{ transform:translateY(0) scale(.97); }
+  .link-arrow{ font-family:'IBM Plex Mono',monospace; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; display:inline-flex; align-items:center; gap:.5rem; border-bottom:1px solid currentColor; opacity:.6; padding-bottom:2px; transition:opacity var(--t) var(--ease), gap var(--t) var(--ease); }
+  .link-arrow:hover{ opacity:1; gap:.75rem; }
+  .reveal{ opacity:0; transform:translateY(22px); animation:revealUp .9s var(--ease) forwards; }
+  @keyframes revealUp{ to{ opacity:1; transform:translateY(0); } }
+  .footer-link{ position:relative; transition:opacity var(--t) var(--ease); }
+  .footer-link:hover{ opacity:.6; }
+  .work-card .work-img{ transition:opacity var(--t) var(--ease); }
+  .work-card:hover .work-img{ opacity:.85; }
+  .work-card-title{ transition:color var(--t) var(--ease); }
+  .work-card:hover .work-card-title{ color:var(--graphite); }
+  @media (max-width: 760px){ html{ font-size:clamp(14px, 2.2vw, 17px); } }
+</style>
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="bg-inkblack text-paper">
+  <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3 min-w-0">
+      <span class="w-1.5 h-1.5 rounded-full bg-paper shrink-0 animate-pulse"></span>
+      <p class="f-mono text-[.7rem] md:text-[.78rem] tracking-[.12em] uppercase truncate">
+        <span class="sm:hidden">Opening Reception — August 7</span>
+        <span class="hidden sm:inline">Opening Reception — August 7, 6:00–9:00 PM · Gallery 456</span>
+      </p>
+    </div>
+    <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="f-mono text-[.7rem] tracking-[.12em] uppercase bg-paper text-inkblack px-4 py-1.5 hover:bg-white transition-colors duration-300 shrink-0">RSVP</a>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader" class="sticky top-0 z-50 transition-colors duration-500" style="transition-timing-function: var(--ease);">
+  <div class="max-w-[1800px] mx-auto px-6 md:px-12 h-[5.5rem] flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3"><img src="Images/LOGO/LOGO_SQ_BLR.jpg" alt="NYADW" class="h-12 w-auto" /><span class="hidden sm:flex flex-col justify-end h-12 pb-[3px] f-mono text-[.78rem] leading-[1.3] tracking-[.12em] uppercase"><span>New York</span><span>Asian Design Week</span></span></a>
+    <nav class="hidden lg:flex items-center gap-9 text-[.92rem]">
+      <a href="2026-edition.html" class="nav-link is-active" aria-current="page">Current Exhibition</a>
+      <a href="open-call.html" class="nav-link">Open Call</a>
+      <a href="index.html#events" class="nav-link">Events</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#host" class="nav-link">Partners</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <button type="button" id="menuToggle" aria-label="Open menu" class="lg:hidden flex flex-col gap-[5px] w-8 h-8 items-end justify-center">
+      <span class="block w-6 h-px bg-current"></span>
+      <span class="block w-6 h-px bg-current"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<nav id="mobileNav" class="fixed inset-0 z-[60] bg-inkblack text-paper flex flex-col h-screen translate-x-full transition-transform duration-500 ease-[cubic-bezier(.25,0,.272,.994)]">
+  <div class="flex items-center justify-between px-6 h-[5.5rem]">
+    <img src="Images/LOGO/LOGO_SQ_BLR.jpg" alt="NYADW" class="h-10 w-auto" />
+    <button type="button" id="menuClose" aria-label="Close menu" class="w-8 h-8 relative">
+      <span class="absolute top-1/2 left-0 w-full h-px bg-paper rotate-45"></span>
+      <span class="absolute top-1/2 left-0 w-full h-px bg-paper -rotate-45"></span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-7 px-6 mt-8 text-[1.6rem]">
+    <a href="2026-edition.html" class="mobile-link">Current Exhibition</a>
+    <a href="open-call.html" class="mobile-link">Open Call</a>
+    <a href="index.html#events" class="mobile-link">Events</a>
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#host" class="mobile-link">Partners</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+  <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="mx-6 mt-10 pill-btn justify-center border border-white/70">RSVP</a>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative bg-inkblack text-paper overflow-hidden min-h-[75vh] md:min-h-screen border-b border-white/10">
+
+    <img src="Images/BG/DirkTsai_Tremor_Forwebsite.jpg" alt="" aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none" />
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+      style="background:linear-gradient(to top, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.72) 22%, rgba(10,10,10,0.18) 50%, transparent 72%);"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+      style="background:linear-gradient(to right, rgba(10,10,10,0.45) 0%, transparent 48%);"></div>
+
+    <div class="absolute inset-0 flex items-end">
+      <div class="w-full max-w-[1800px] mx-auto px-6 md:px-12 pb-14 md:pb-20">
+        <div class="md:w-[58%]">
+          <p class="reveal label text-stone" style="animation-delay:.05s">New York Asian Design Week — 2026</p>
+          <h1 class="reveal f-display text-[3.2rem] md:text-[4.6rem] leading-[0.96] uppercase mt-5" style="animation-delay:.15s">
+            Traces<br/>of Force
+          </h1>
+          <p class="reveal f-mono text-[.85rem] uppercase tracking-[.1em] text-stone mt-6 hidden md:block" style="animation-delay:.28s">Force Forms Matter</p>
+          <p class="reveal f-display text-[2rem] leading-[0.96] uppercase text-paper mt-5 md:hidden" style="animation-delay:.28s">Traces of Force</p>
+          <p class="reveal text-[.95rem] text-ash/80 max-w-md mt-4" style="animation-delay:.34s">
+            At Gallery 456, New York Asian Design Week explores how material, technological, environmental, and cultural forces shape contemporary Asian design.
+          </p>
+          <div class="reveal mt-9 flex flex-wrap items-center gap-4" style="animation-delay:.42s">
+            <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="pill-btn bg-paper text-inkblack border border-paper hover:bg-white">RSVP for the Opening</a>
+            <a href="#selected-works" class="pill-btn border border-paper/60 text-paper hover:bg-paper hover:text-inkblack">View Selected Works</a>
+          </div>
+          <div class="reveal mt-10 pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-6" style="animation-delay:.52s">
+            <div>
+              <p class="f-display text-[1.3rem] md:text-[1.6rem] leading-none">August 7–21</p>
+              <p class="label text-stone mt-1">Exhibition 2026</p>
+            </div>
+            <div>
+              <p class="f-display text-[1.3rem] md:text-[1.6rem] leading-none">Aug 7, 6–9 PM</p>
+              <p class="label text-stone mt-1">Opening Reception</p>
+            </div>
+            <div>
+              <p class="f-display text-[1.3rem] md:text-[1.6rem] leading-none">Gallery 456</p>
+              <p class="label text-stone mt-1">456 Broadway, 3rd Floor</p>
+            </div>
+            <div>
+              <p class="f-display text-[1.3rem] md:text-[1.6rem] leading-none">9 / 11</p>
+              <p class="label text-stone mt-1">Works / Artists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FULL EXHIBITION STATEMENT ============ -->
+  <section id="exhibition-statement" class="bg-paper border-b border-ash scroll-mt-[5.5rem]">
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-14 md:py-20 grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="label mb-4">Exhibition Statement</p>
+      </div>
+      <div class="md:col-span-2 text-[.92rem] text-graphite leading-relaxed space-y-5 max-w-3xl">
+        <p><em>Traces of Force</em> brings together nine works spanning architecture, painting, photography, installation, and furniture design. Presented as the inaugural Physical edition of New York Asian Design Week's two-year dialogue between the physical and the digital, the exhibition approaches form not as a finished appearance, but as evidence of an encounter. Matter bends, stretches, burns, settles, fractures, and resists. Bodies, identities, environments, and cultures are shaped through comparable processes. Each work begins with a force—structural, technological, emotional, environmental, or social—and considers the trace it leaves behind.</p>
+        <p>The exhibition unfolds through a series of pairings and correspondences, placing distinct materials and modes of production in conversation. Runxin Fu's <em>Hejduk Lamp</em>, fabricated through precisely programmed non-planar 3D printing, is presented alongside Celine Song's photographs of pottery making and kiln firing in Zhengjiayao Village. The contrast is immediate: one process choreographs the movement of a machine in pursuit of controlled precision, while the other preserves the minute variations of the hand—the pressure of fingers against clay, the repetition of inherited gestures, and the unpredictability of fire. Yet both reveal form as the accumulation of movement, heat, time, and knowledge. Rather than positioning technology and tradition as opposites, the pairing asks how different systems of making register the forces embedded within their production.</p>
+        <p>Material tension takes another form in Lihan Jin's <em>Tension Instrument</em> and Dirk Tsai's <em>Tremor</em>. In <em>Tension Instrument</em>, a taut metal string bends wood into an architectural prototype, translating acoustic and structural tension into spatial form. In <em>Tremor</em>, canvas behaves as skin stretched and folded over a constructed wooden skeleton, swelling beyond the conventional plane of painting. One work explores tension as a means of structural and musical harmony; the other understands deformation as an expression of bodily and psychological resistance. In both, bending is not applied as a stylistic gesture. It emerges as the visible consequence of matter negotiating with force.</p>
+        <p>The urban environment becomes the site of less visible pressures in three works that examine how contemporary cities are shaped by emotional, technological, and perceptual forces. Niki Li's <em>Tension &amp; Tranquility</em> presents fragmented digital visions of New York that register emotional turbulence, insecurity, and social division. Yue Fan's <em>Traces of Transparency</em> projects these conditions into an augmented-reality future in which algorithms, advertisements, and personalized information continually rewrite architecture and public space. Sang Hoon Bae's two-meter-wide painting <em>The Greater Archipelago</em> extends this inquiry through an architectural perspective, translating his impressions of New York into a layered spatial and visual composition. Together, these works suggest that cities are shaped not only by concrete and steel, but also by anxiety, memory, data, commercial influence, identity, and attention. The urban image becomes unstable—a contested surface through which personal and collective realities are continually negotiated.</p>
+        <p>Moving from the urban environment to the natural landscape, <em>SANKAI – Mountain / Ocean / In-Between</em> reconsiders architecture's relationship with its surroundings. Situated between forested mountains and the Pacific Ocean, the project weaves together these contrasting landscapes through a centrally positioned, elevated structure that preserves the site's existing topography and water systems. A floating bridge marks the arrival, while the plan extends outward toward distinct environmental conditions: bedrooms face the forest for privacy and calm, the master suite hovers above a koi pond, and shared living spaces open toward the ocean. Rather than treating the landscape as a passive backdrop, the project allows water, vegetation, elevation, and distant views to actively shape architectural form.</p>
+        <p>In Kang Wang's <em>The Boat</em>, force is registered through collision and material transformation. Disposable takeout containers and bamboo chopsticks are pierced, crushed, melted, and fused with burned metal and forged nails. Familiar objects associated with consumption, cultural visibility, and disposability are subjected to heat and mechanical pressure, becoming records of conflict between externally imposed identities and the internal forces used to resist or transform them.</p>
+        <p>Across the exhibition, Asian design does not appear as a singular visual language or recognizable set of motifs. It emerges instead through negotiation: between precision and imperfection, inheritance and transformation, displacement and belonging, technological acceleration and material resistance. Cultural identity is not contained within an image or symbol, but formed through acts of making, adaptation, translation, and what is carried forward.</p>
+        <p>A trace is never the force itself. It is what remains after contact—an imprint, a deformation, a residue, a fracture, or a new orientation. <em>Traces of Force</em> invites viewers to encounter each work not simply as an object, image, or proposal, but as the material record of a process still unfolding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SELECTED WORKS ============ -->
+  <section id="selected-works" class="bg-paper border-b border-ash scroll-mt-[5.5rem]">
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-14 md:py-20">
+      <p class="label">Selected Works</p>
+      <h2 class="f-display text-[1.4rem] md:text-[2.3rem] leading-[1.15] mt-4">Traces of Force</h2>
+      <p class="text-[.92rem] text-graphite max-w-xl mt-4">Nine works by eleven artists and designers examine how structural, technological, emotional, environmental, and social forces become visible through matter, image, space, and making.</p>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+
+        <a href="works/hejduk-lamp.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Lamp.jpg" alt="Hejduk's Lamp" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">Hejduk Lamp</p>
+            <p class="text-[.85rem] text-graphite mt-1">Runxin Fu</p>
+          </div>
+        </a>
+
+        <a href="works/tremor.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Dirk.jpg" alt="Tremor" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">Tremor</p>
+            <p class="text-[.85rem] text-graphite mt-1">Dirk Tsai</p>
+          </div>
+        </a>
+
+        <a href="works/tension-instrument.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Tension Instrument.jpg" alt="Tension Instrument" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">Tension Instrument</p>
+            <p class="text-[.85rem] text-graphite mt-1">Lihan Jin</p>
+          </div>
+        </a>
+
+        <a href="works/residual-thermodynamics.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/The Boat.jpg" alt="The Boat" class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">The Boat</p>
+            <p class="text-[.85rem] text-graphite mt-1">Kang Wang</p>
+          </div>
+        </a>
+
+        <a href="works/one-kilns-flame.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Yuhan.jpg" alt="One Kiln's Flame, Generations of Touch" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">One Kiln's Flame, Generations of Touch</p>
+            <p class="text-[.85rem] text-graphite mt-1">Yuhan (Celine) Song</p>
+          </div>
+        </a>
+
+        <a href="works/sankai.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Sankai.jpg" alt="SANKAI" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">SANKAI – Mountain / Ocean / In-Between</p>
+            <p class="text-[.85rem] text-graphite mt-1">Jonathan Liang, Kurt Cheang, Lihan Jin, Zida Liu</p>
+          </div>
+        </a>
+
+        <a href="works/tension-and-tranquility.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Niki.jpg" alt="Tension &amp; Tranquility" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">Tension &amp; Tranquility</p>
+            <p class="text-[.85rem] text-graphite mt-1">Niki Li</p>
+          </div>
+        </a>
+
+        <a href="works/traces-of-transparency.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <img src="Images/Current Exhibition_Workcards/Yue Fan.jpg" alt="Traces of Transparency" class="absolute inset-0 w-full h-full object-cover object-center" />
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">Traces of Transparency</p>
+            <p class="text-[.85rem] text-graphite mt-1">Yue Fan</p>
+          </div>
+        </a>
+
+        <a href="works/the-greater-archipelago.html" class="work-card group block">
+          <div class="work-img aspect-[4/3] bg-ash rounded-lg overflow-hidden relative">
+            <div class="absolute inset-0 flex items-center justify-center"><p class="label text-center px-4">Image Pending</p></div>
+          </div>
+          <div class="mt-4">
+            <p class="work-card-title f-display text-[1rem] leading-snug">The Greater Archipelago</p>
+            <p class="text-[.85rem] text-graphite mt-1">Sanghoon Bae</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPENING RECEPTION CTA ============ -->
+  <section class="bg-inkblack text-paper">
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-16 md:py-24">
+      <p class="label text-stone">Opening Reception</p>
+      <h2 class="f-display text-[2.4rem] md:text-[3.5rem] leading-[1.0] mt-6">Friday, August 7, 2026<br/>6:00–9:00 PM</h2>
+      <p class="text-[.92rem] text-ash/70 mt-6 max-w-md">Gallery 456 / Chinese American Arts Council<br/>456 Broadway, 3rd Floor · New York, NY 10013</p>
+      <p class="f-mono text-[.78rem] uppercase tracking-[.1em] text-stone/80 mt-3">Free and open to all. RSVP requested.</p>
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="pill-btn bg-paper text-inkblack border border-paper hover:bg-white">RSVP for the Opening</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Gallery+456+456+Broadway+New+York+NY+10013" target="_blank" rel="noopener" class="link-arrow text-paper">
+          View on Map
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FUNDING ============ -->
+  <section class="bg-paper border-b border-ash">
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-10 md:py-12">
+      <p class="f-display text-[1.1rem] font-medium tracking-[.01em] text-charcoal mb-5">Partners & Supporters</p>
+      <p class="text-[.85rem] text-graphite/70 leading-relaxed max-w-3xl">
+        This project is made possible in part with funds from Creative Engagement, a regrant program supported by the New York City Department of Cultural Affairs in partnership with the City Council, and the New York State Council on the Arts with the support of the Office of the Governor and the New York State Legislature, and administered by the Lower Manhattan Cultural Council.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-inkblack text-paper">
+  <div class="max-w-[1800px] mx-auto px-6 md:px-12 pt-14 md:pt-20 pb-10">
+    <div class="flex flex-wrap items-start justify-between gap-10">
+      <div><img src="Images/LOGO/LOGO_SQ_BLR.jpg" alt="NYADW" class="h-12 w-auto" /></div>
+      <div class="flex flex-wrap gap-16">
+        <div>
+          <p class="label mb-4">Pages</p>
+          <ul class="space-y-2 text-[.92rem]">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="2026-edition.html" class="footer-link">2026 Edition</a></li>
+            <li><a href="open-call.html" class="footer-link">Open Call</a></li>
+            <li><a href="index.html#about" class="footer-link">About NYADW</a></li>
+            <li><a href="index.html#events" class="footer-link">Events</a></li>
+            <li><a href="index.html#host" class="footer-link">Partners</a></li>
+            <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label mb-4">Affiliated</p>
+          <ul class="space-y-2 text-[.92rem]">
+            <li><a href="#" class="footer-link">Lighthouse Global Foundation</a></li>
+            <li><a href="https://lmcc.net/resources/manhattan-arts-grants/creative-engagement/" target="_blank" rel="noopener" class="footer-link">LMCC</a></li>
+            <li><a href="http://www.caacarts.org/" target="_blank" rel="noopener" class="footer-link">CAAC / Gallery 456</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label mb-4">Social</p>
+          <ul class="space-y-2 text-[.92rem]">
+            <li><a href="#" target="_blank" rel="noopener" class="footer-link">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="index.html#contact" class="pill-btn border border-white/30 hover:bg-white hover:text-inkblack">Contact</a>
+    </div>
+    <div class="border-t border-white/10 mt-12 pt-12">
+      <h3 class="f-display text-[1.7rem] md:text-[2.4rem] leading-tight uppercase">Force forms matter.</h3>
+      <p class="text-[.9rem] text-ash/60 max-w-lg mt-3">New York Asian Design Week is hosted by Lighthouse Global Foundation Inc., a 501(c)(3) nonprofit organization that supports people in need and brings communities together through arts, design, and cultural exchange — open to all, at no cost wherever we can.</p>
+    </div>
+    <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-white/40 f-mono text-[.75rem] uppercase tracking-[.08em]">
+      <p>© 2026 New York Asian Design Week — Lighthouse Global Foundation Inc.</p>
+      <p>Traces of Force — Physical Edition</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const siteHeader = document.getElementById('siteHeader');
+  function onScroll(){ if (window.scrollY > 40) siteHeader.classList.add('scrolled'); else siteHeader.classList.remove('scrolled'); }
+  window.addEventListener('scroll', onScroll); onScroll();
+  const menuToggle = document.getElementById('menuToggle');
+  const menuClose = document.getElementById('menuClose');
+  const mobileNav = document.getElementById('mobileNav');
+  menuToggle.addEventListener('click', () => mobileNav.classList.remove('translate-x-full'));
+  menuClose.addEventListener('click', () => mobileNav.classList.add('translate-x-full'));
+  mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileNav.classList.add('translate-x-full')));
+</script>
+</body>
+</html>

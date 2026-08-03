@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>New York Asian Design Week 2026 | Traces of Force</title>
-<meta name="description" content="New York Asian Design Week 2026 presents Traces of Force, a Physical edition exploring Asian design through matter, pressure, resistance, contact, and what remains." />
+<title>Traces of Force | New York Asian Design Week 2026</title>
+<meta name="description" content="Traces of Force brings together nine works by eleven artists and designers at Gallery 456 in New York, August 7–21, 2026. Opening reception August 7, 6–9 PM." />
+<!-- RSVP_URL: https://luma.com/krzzq87u -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,8 +70,7 @@
   .label{ font-family:'IBM Plex Mono',monospace; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--midgrey); }
 
   /* ---------- header ---------- */
-  #siteHeader{ background:transparent; color:var(--charcoal); }
-  #siteHeader.scrolled{ background:rgba(242,242,240,.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--ash); }
+  #siteHeader{ background:rgba(242,242,240,.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--ash); color:var(--charcoal); }
 
   /* ---------- nav ---------- */
   .nav-link{ position:relative; transition:opacity var(--t) var(--ease); font-family:'IBM Plex Sans',sans-serif; }
@@ -135,6 +135,12 @@
   .footer-link{ position:relative; transition:opacity var(--t) var(--ease); }
   .footer-link:hover{ opacity:.6; }
 
+  /* ---------- work card ---------- */
+  .work-card .work-img{ transition:opacity var(--t) var(--ease); }
+  .work-card:hover .work-img{ opacity:.85; }
+  .work-card-title{ transition:color var(--t) var(--ease); }
+  .work-card:hover .work-card-title{ color:var(--graphite); }
+
   @media (max-width: 760px){
     html{ font-size:clamp(14px, 2.2vw, 17px); }
   }
@@ -158,13 +164,12 @@
     <div class="flex items-center gap-3 min-w-0">
       <span class="w-1.5 h-1.5 rounded-full bg-paper shrink-0 animate-pulse"></span>
       <p class="f-mono text-[.7rem] md:text-[.78rem] tracking-[.12em] uppercase truncate">
-        <span class="sm:hidden">Open Call — July 24</span>
-        <span class="hidden sm:inline">Open Call Now Live — Submit work by July 24</span>
+        <span class="sm:hidden">Opening Reception — August 7</span>
+        <span class="hidden sm:inline">Opening Reception — August 7, 6:00–9:00 PM · Gallery 456</span>
       </p>
     </div>
     <div class="flex items-center gap-3 sm:gap-5 shrink-0">
-      <a href="open-call.html" class="sm:hidden f-mono text-[.7rem] tracking-[.12em] uppercase bg-paper text-inkblack px-4 py-1.5 hover:bg-white transition-colors duration-300">Submit Work</a>
-      <a href="open-call.html#requirements" class="hidden sm:inline-block f-mono text-[.7rem] tracking-[.1em] uppercase border-b border-white/30 hover:border-white/90 transition-colors duration-300 pb-px">View Requirements</a>
+      <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="f-mono text-[.7rem] tracking-[.12em] uppercase bg-paper text-inkblack px-4 py-1.5 hover:bg-white transition-colors duration-300">RSVP</a>
     </div>
   </div>
 </div>
@@ -172,23 +177,16 @@
 <!-- ============ HEADER ============ -->
 <header id="siteHeader" class="sticky top-0 z-50 transition-colors duration-500" style="transition-timing-function: var(--ease);">
   <div class="max-w-[1800px] mx-auto px-6 md:px-12 h-[5.5rem] flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2.5">
-      <span class="w-2 h-2 rounded-full" style="background:radial-gradient(circle at 50% 32%, var(--black) 0%, var(--black) 55%, transparent 100%);"></span>
-      <span class="f-display text-[1.05rem] tracking-[.02em]">NYADW<span class="text-midgrey font-normal ml-1">/26</span></span>
-    </a>
+    <a href="index.html" class="flex items-center gap-3"><img src="Images/LOGO/LOGO_SQ_BLR.jpg" alt="NYADW" class="h-12 w-auto" /><span class="hidden sm:flex flex-col justify-end h-12 pb-[3px] f-mono text-[.78rem] leading-[1.3] tracking-[.12em] uppercase"><span>New York</span><span>Asian Design Week</span></span></a>
 
     <nav class="hidden lg:flex items-center gap-9 text-[.92rem]">
+      <a href="2026-edition.html" class="nav-link">Current Exhibition</a>
       <a href="open-call.html" class="nav-link">Open Call</a>
-      <a href="#theme" class="nav-link">2026 Edition</a>
-      <a href="#about" class="nav-link">About</a>
       <a href="#events" class="nav-link">Events</a>
+      <a href="#about" class="nav-link">About</a>
       <a href="#host" class="nav-link">Partners</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
-
-    <a href="open-call.html" class="hidden sm:inline-flex pill-btn border border-current/70 hover:bg-charcoal hover:text-paper hover:border-charcoal">
-      Submit Work
-    </a>
 
     <button type="button" id="menuToggle" aria-label="Open menu" class="lg:hidden flex flex-col gap-[5px] w-8 h-8 items-end justify-center">
       <span class="block w-6 h-px bg-current"></span>
@@ -200,104 +198,253 @@
 <!-- ============ MOBILE NAV ============ -->
 <nav id="mobileNav" class="fixed inset-0 z-[60] bg-inkblack text-paper flex flex-col h-screen translate-x-full transition-transform duration-500 ease-[cubic-bezier(.25,0,.272,.994)]">
     <div class="flex items-center justify-between px-6 h-[5.5rem]">
-      <span class="f-display text-[1.05rem]">NYADW<span class="text-midgrey ml-1">/26</span></span>
+      <img src="Images/LOGO/LOGO_SQ_BLR.jpg" alt="NYADW" class="h-10 w-auto" />
       <button type="button" id="menuClose" aria-label="Close menu" class="w-8 h-8 relative">
         <span class="absolute top-1/2 left-0 w-full h-px bg-paper rotate-45"></span>
         <span class="absolute top-1/2 left-0 w-full h-px bg-paper -rotate-45"></span>
       </button>
     </div>
     <div class="flex flex-col gap-7 px-6 mt-8 text-[1.6rem]">
+      <a href="2026-edition.html" class="mobile-link">Current Exhibition</a>
       <a href="open-call.html" class="mobile-link">Open Call</a>
-      <a href="#theme" class="mobile-link">2026 Edition</a>
-      <a href="#about" class="mobile-link">About</a>
       <a href="#events" class="mobile-link">Events</a>
+      <a href="#about" class="mobile-link">About</a>
       <a href="#host" class="mobile-link">Partners</a>
       <a href="#contact" class="mobile-link">Contact</a>
     </div>
-    <a href="open-call.html" class="mx-6 mt-10 pill-btn justify-center border border-white/70">Submit Work</a>
+    <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="mx-6 mt-10 pill-btn justify-center border border-white/70">RSVP</a>
 </nav>
 
 <main>
 
   <!-- ============ HERO ============ -->
-  <section class="relative bg-paper text-charcoal overflow-hidden min-h-[38rem] md:min-h-[44rem] border-b border-ash">
-    <div class="orb-wrap opacity-80" aria-hidden="true">
-      <img src="BG.jpg" alt="" class="orb-pulse absolute right-[-6%] md:right-auto md:left-[-4%] top-0 w-[58%] md:w-[46%] h-full object-contain object-top" />
-    </div>
+  <section class="relative bg-inkblack text-paper overflow-hidden min-h-[75vh] md:min-h-screen border-b border-white/10">
 
-    <div class="relative max-w-[1800px] mx-auto px-6 md:px-12 h-full pt-[7rem] md:pt-[9rem] pb-16">
-      <div class="md:ml-auto md:w-[60%]">
-        <p class="reveal label" style="animation-delay:.05s">New York Asian Design Week — 2026</p>
-        <h1 class="reveal f-display text-[3.2rem] md:text-[4.6rem] leading-[0.96] uppercase mt-5" style="animation-delay:.15s">
-          Traces<br/>of Force
-        </h1>
-        <p class="reveal f-mono text-[.85rem] uppercase tracking-[.1em] text-graphite mt-6" style="animation-delay:.28s">Force Forms Matter</p>
-        <p class="reveal text-[.95rem] text-graphite max-w-md mt-4" style="animation-delay:.34s">
-          A form is not a finished appearance — it is the consequence of contact. Between idea and material. Body and environment. Memory and transformation.
-        </p>
+    <!-- Background image — full cover -->
+    <img src="Images/BG/DirkTsai_Tremor_Forwebsite.jpg" alt="" aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none" />
 
-        <div class="reveal mt-9 flex flex-wrap items-center gap-4" style="animation-delay:.42s">
-          <a href="open-call.html" class="pill-btn bg-charcoal text-paper border border-charcoal hover:bg-inkblack">Submit Work</a>
-          <a href="open-call.html#requirements" class="pill-btn border border-charcoal/60 hover:bg-charcoal hover:text-paper">View Open Call Requirements</a>
-          <a href="NYADW26_TRACES%20OF%20FORCE_STATEMENT.pdf" target="_blank" rel="noopener" class="link-arrow">
-            Read Curatorial Statement
-            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
-          </a>
+    <!-- Bottom gradient — only darkens below the text zone, leaving the image open above -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+      style="background:linear-gradient(to top, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.72) 22%, rgba(10,10,10,0.18) 50%, transparent 72%);"></div>
+
+    <!-- Subtle left-edge vignette for text contrast -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+      style="background:linear-gradient(to right, rgba(10,10,10,0.45) 0%, transparent 48%);"></div>
+
+    <!-- Text anchored to bottom of section -->
+    <div class="absolute inset-0 flex items-end">
+      <div class="w-full max-w-[1800px] mx-auto px-6 md:px-12 pb-14 md:pb-20">
+        <div class="md:w-[52%]">
+          <p class="reveal label text-stone" style="animation-delay:.05s">New York Asian Design Week — 2026</p>
+          <h1 class="reveal f-display text-[3.2rem] md:text-[4.6rem] leading-[0.96] uppercase mt-5" style="animation-delay:.15s">
+            Traces<br/>of Force
+          </h1>
+          <p class="reveal f-mono text-[.85rem] uppercase tracking-[.1em] text-stone mt-6" style="animation-delay:.28s">Force Forms Matter</p>
+          <p class="reveal text-[.95rem] text-ash/80 max-w-md mt-4" style="animation-delay:.34s">
+            At Gallery 456, New York Asian Design Week explores how material, technological, environmental, and cultural forces shape contemporary Asian design.
+          </p>
+
+          <div class="reveal mt-9 flex flex-wrap items-center gap-4" style="animation-delay:.42s">
+            <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="pill-btn bg-paper text-inkblack border border-paper hover:bg-white">RSVP for the Opening</a>
+            <a href="2026-edition.html" class="pill-btn border border-paper/60 text-paper hover:bg-paper hover:text-inkblack">Explore the Exhibition</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ OPEN CALL QUICK INFO (number-grid) ============ -->
-  <section id="open-call" class="bg-paper border-b border-ash scroll-mt-[5.5rem]">
+  <!-- ============ EXHIBITION DETAILS ============ -->
+  <section id="exhibition" class="bg-paper border-b border-ash scroll-mt-[5.5rem]">
     <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-14 md:py-20">
-      <p class="label">Open Call</p>
-      <h2 class="f-display text-[1.4rem] md:text-[2.3rem] leading-[1.15] mt-4 md:whitespace-nowrap">
-        For Designers, Artists, Architects &amp; Makers
-      </h2>
-      <p class="text-[.92rem] text-graphite max-w-xl mt-4">
-        We invite designers, artists, architects, makers, and creative practitioners to submit work that explores how force, material, body, environment, memory, and culture shape physical design today.
-      </p>
+      <p class="label">NYADW 2026 — Traces of Force</p>
+      <div class="text-[.92rem] text-graphite max-w-xl mt-4 space-y-4">
+        <p>New York Asian Design Week presents <em>Traces of Force</em>, a group exhibition at Gallery 456 bringing together nine works by eleven designers across architecture and its intersections with furniture, photography, and painting. The exhibition examines how structural, technological, emotional, environmental, and social forces shape material form and spatial experience.</p>
+        <p>Organized through pairings and correspondences, the works place digital fabrication in dialogue with traditional craftsmanship, material tension with bodily resistance, and urban perception with emerging technology. Across the exhibition, Asian design emerges not as a fixed visual language, but through negotiations between precision and imperfection, inheritance and transformation, displacement and belonging.</p>
+        <a href="2026-edition.html#exhibition-statement" class="link-arrow inline-flex">
+          Read the Full Exhibition Statement
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
 
-      <div class="mt-12 border-t border-ash pt-8 grid md:grid-cols-[1fr_1fr_1fr] gap-10">
-        <p class="text-[.85rem] text-midgrey max-w-xs">Selected works will be exhibited at Gallery 456, the main venue of NYADW 2026.</p>
-        <div class="space-y-8">
-          <div>
-            <p class="f-display text-[1.7rem] md:text-[2rem] leading-none">July 24</p>
-            <p class="label mt-1">Deadline</p>
-          </div>
-          <div>
-            <p class="f-display text-[1.7rem] md:text-[2rem] leading-none">Traces of Force</p>
-            <p class="label mt-1">Theme</p>
-          </div>
+    </div>
+  </section>
+
+  <!-- ============ OPENING RECEPTION ============ -->
+  <section id="reception" class="bg-inkblack text-paper scroll-mt-[5.5rem]">
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-16 md:py-24">
+      <p class="label text-stone">Opening Reception</p>
+      <h2 class="f-display text-[1.8rem] md:text-[2.6rem] leading-[1.1] mt-6">
+        Friday, August 7<br/>6:00–9:00 PM
+      </h2>
+
+      <div class="mt-10 grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16">
+        <div>
+          <p class="text-[.92rem] text-ash/80 leading-relaxed max-w-lg">
+            Join New York Asian Design Week for the opening of <em>Traces of Force</em>, featuring nine works by eleven artists and designers across architecture, painting, photography, installation, and furniture design.
+          </p>
+          <p class="text-[.92rem] text-ash/80 leading-relaxed max-w-lg mt-4">
+            Meet participating artists and designers, explore the exhibition, and experience the inaugural Physical edition of NYADW's two-year dialogue between physical and digital design.
+          </p>
         </div>
-        <div class="space-y-8">
-          <div>
-            <p class="f-display text-[1.7rem] md:text-[2rem] leading-none">Gallery 456</p>
-            <p class="label mt-1">Selected Works Venue</p>
-          </div>
-          <div>
-            <p class="f-display text-[1.7rem] md:text-[2rem] leading-none">Physical</p>
-            <p class="label mt-1">Edition</p>
-          </div>
+        <div class="md:border-l md:border-white/10 md:pl-10">
+          <p class="label text-stone mb-3">Venue</p>
+          <p class="f-display text-[1.05rem] leading-snug">Gallery 456 / Chinese American Arts Council</p>
+          <p class="text-[.92rem] text-ash/70 mt-2">456 Broadway, 3rd Floor<br/>New York, NY 10013</p>
+          <p class="f-mono text-[.78rem] uppercase tracking-[.1em] text-stone/80 mt-5">Free and open to all. RSVP requested.</p>
         </div>
       </div>
 
-      <div class="mt-12 flex flex-wrap items-center gap-4">
-        <a href="open-call.html" class="pill-btn bg-charcoal text-paper border border-charcoal hover:bg-inkblack">Submit Work</a>
-        <a href="open-call.html#requirements" class="link-arrow">
-          View Requirements
-          <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
-        </a>
-        <a href="NYADW26_TRACES%20OF%20FORCE_STATEMENT.pdf" target="_blank" rel="noopener" class="link-arrow">
-          Read Curatorial Statement
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="pill-btn bg-paper text-inkblack border border-paper hover:bg-white">RSVP for the Opening</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Gallery+456+456+Broadway+New+York+NY+10013" target="_blank" rel="noopener" class="link-arrow text-paper">
+          View on Map
           <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ============ INTRO ============ -->
+  <!-- ============ WORKS PREVIEW ============ -->
+  <section class="bg-paper border-b border-ash overflow-hidden">
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 pt-14 md:pt-16 pb-6 flex items-end justify-between">
+      <div>
+        <p class="label">Selected Works</p>
+        <h2 class="f-display text-[1.6rem] md:text-[2.2rem] mt-2">Traces of Force</h2>
+      </div>
+      <div class="flex items-center gap-3 mb-0.5">
+        <button type="button" id="wkPrev" class="arrow-btn border border-charcoal/15 hover:bg-charcoal hover:text-paper" aria-label="Previous work">
+          <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M2 7L6.5 2.5M2 7L6.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button type="button" id="wkNext" class="arrow-btn bg-charcoal text-paper hover:bg-inkblack" aria-label="Next work">
+          <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="ev-track scroll-pl-6 md:scroll-pl-12 px-6 md:px-12 pb-10 md:pb-14" id="wkTrack">
+
+      <a href="works/hejduk-lamp.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Lamp.jpg" alt="Hejduk's Lamp" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Furniture / Product Design</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">Hejduk's Lamp</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Runxin Fu</p>
+        </div>
+      </a>
+
+      <a href="works/tremor.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Dirk.jpg" alt="Tremor" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Painting / Sculpture</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">Tremor</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Dirk Tsai</p>
+        </div>
+      </a>
+
+      <a href="works/tension-instrument.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Lihan.jpg" alt="Tension Instrument" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Architecture</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">Tension Instrument</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Lihan Jin</p>
+        </div>
+      </a>
+
+      <a href="works/residual-thermodynamics.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/The Boat.jpg" alt="The Boat" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Mixed-Media Installation</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">The Boat</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Kang Wang</p>
+        </div>
+      </a>
+
+      <a href="works/one-kilns-flame.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Yuhan_1.jpg" alt="One Kiln's Flame, Generations of Touch" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Photography</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">One Kiln's Flame, Generations of Touch</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Yuhan (Celine) Song</p>
+        </div>
+      </a>
+
+      <a href="works/sankai.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Sankai.jpg" alt="SANKAI" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Architecture</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">SANKAI</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Jonathan Liang, Kurt Cheang, Lihan Jin, Zida Liu</p>
+        </div>
+      </a>
+
+      <a href="works/tension-and-tranquility.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Niki.jpg" alt="Tension &amp; Tranquility" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Visual Art / Photography</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">Tension &amp; Tranquility</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Niki Li</p>
+        </div>
+      </a>
+
+      <a href="works/traces-of-transparency.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <img src="Images/Artwork Image_Carousel/Fan Yue.jpg" alt="Traces of Transparency" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Speculative Architecture / Design</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">Traces of Transparency</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Yue Fan</p>
+        </div>
+      </a>
+
+      <a href="works/the-greater-archipelago.html" class="group flex-none snap-start w-[15rem] md:w-[18.5rem]">
+        <div class="aspect-[3/4] bg-ash rounded-2xl overflow-hidden relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <p class="label text-center text-midgrey px-4">Image Pending</p>
+          </div>
+          <div class="absolute inset-0 bg-inkblack/0 group-hover:bg-inkblack/[.08] transition-colors duration-300"></div>
+        </div>
+        <div class="mt-3 px-0.5">
+          <p class="label text-[.63rem]">Painting</p>
+          <p class="f-display text-[.95rem] leading-snug mt-1 group-hover:text-graphite transition-colors duration-200">The Greater Archipelago</p>
+          <p class="text-[.82rem] text-graphite mt-0.5">Sanghoon Bae</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="max-w-[1800px] mx-auto px-6 md:px-12 pb-10 flex justify-end">
+      <a href="2026-edition.html#selected-works" class="link-arrow">
+        View All Works
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
   <section id="about" class="bg-paper scroll-mt-[5.5rem]">
     <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-16 md:py-20">
       <p class="f-display text-[1.4rem] md:text-[1.9rem] leading-[1.3] max-w-4xl">
@@ -326,83 +473,16 @@
     </div>
   </section>
 
-  <!-- ============ TIMELINE: TWO-YEAR DIALOGUE ============ -->
-  <section id="theme" class="relative bg-inkblack text-paper scroll-mt-[5.5rem]">
-    <div class="sticky top-[5.5rem] z-10 flex items-center justify-between px-6 md:px-12 py-6 text-sm bg-inkblack">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full" style="background:radial-gradient(circle at 50% 32%, var(--paper) 0%, var(--paper) 55%, transparent 100%);"></span>
-        <span class="f-mono uppercase tracking-[.15em] text-xs">Two-Year Dialogue</span>
-      </div>
-    </div>
-
-    <div class="max-w-[1800px] mx-auto px-3 md:px-8 pb-10">
-      <div class="bg-paper text-charcoal rounded-t-[1.5rem] overflow-hidden">
-
-        <div class="grid md:grid-cols-[1fr_1.4fr_1fr] border-b border-ash items-center">
-          <div class="px-6 md:px-10 py-10 md:py-14">
-            <span class="f-display text-[2.2rem] md:text-[2.8rem]">2026</span>
-            <p class="label mt-1">Physical</p>
-          </div>
-          <div class="px-6 md:px-0 pb-8 md:pb-0 text-[.88rem] leading-relaxed text-charcoal/85 max-w-md">
-            <strong class="f-display font-normal">Traces of Force</strong> opens the cycle with a focus on the Physical — spaces, objects, materials, environments, installations, products, architecture, craft, and embodied experience. It examines physical design as the reaction of invisible forces — gravity, pressure, movement, material behavior, bodily habit, environmental change, and cultural memory.
-          </div>
-          <div class="h-44 md:h-full relative overflow-hidden bg-charcoal">
-            <svg viewBox="0 0 200 200" class="absolute inset-0 w-full h-full contour-fade" preserveAspectRatio="xMidYMid slice">
-              <g filter="url(#contourDistort)" fill="none" stroke="#F2F2F0" stroke-width="0.8" opacity=".5">
-                <circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="80"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-[1fr_1.4fr_1fr] border-b border-ash items-center">
-          <div class="px-6 md:px-10 py-10 md:py-14">
-            <span class="f-display text-[2.2rem] md:text-[2.8rem] text-stone">2027</span>
-            <p class="label mt-1">Digital</p>
-          </div>
-          <div class="px-6 md:px-0 pb-8 md:pb-0 text-[.88rem] leading-relaxed text-midgrey max-w-md">
-            The conversation turns toward the Digital — interfaces, virtual environments, AI, moving image, media art, online identity, and networked culture.
-          </div>
-          <div class="h-44 md:h-full bg-[#e7e7e4] opacity-60"></div>
-        </div>
-
-        <div class="grid md:grid-cols-[1fr_1.4fr_1fr] border-b border-ash items-center">
-          <div class="px-6 md:px-10 py-10 md:py-14">
-            <span class="f-display text-[2.2rem] md:text-[2.8rem] text-stone">2028</span>
-            <p class="label mt-1">Physical</p>
-          </div>
-          <div class="px-6 md:px-0 pb-8 md:pb-0 text-[.88rem] leading-relaxed text-midgrey max-w-md">
-            Returns to physical design with a new theme.
-          </div>
-          <div class="h-44 md:h-full bg-[#ece6dc] opacity-50"></div>
-        </div>
-
-        <div class="grid md:grid-cols-[1fr_1.4fr_1fr] items-center">
-          <div class="px-6 md:px-10 py-10 md:py-14">
-            <span class="f-display text-[2.2rem] md:text-[2.8rem] text-stone">2029</span>
-            <p class="label mt-1">Digital</p>
-          </div>
-          <div class="px-6 md:px-0 pb-8 md:pb-0 text-[.88rem] leading-relaxed text-midgrey max-w-md">
-            Returns to digital / virtual design with a new theme.
-          </div>
-          <div class="h-44 md:h-full bg-[#dfe3ea] opacity-50"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
   <!-- ============ UPCOMING EVENTS ============ -->
   <section id="events" class="bg-paper pb-16 md:pb-24 scroll-mt-[5.5rem]">
     <div class="max-w-[1800px] mx-auto px-6 md:px-12">
       <div class="flex items-center justify-between pt-16 md:pt-24 mb-10">
         <div>
-          <p class="label">Upcoming</p>
+          <p class="label">Public Programme</p>
           <h2 class="f-display text-[1.9rem] md:text-[2.6rem] mt-3">Events</h2>
         </div>
         <div class="flex items-center gap-4">
-          <span class="text-sm text-midgrey f-mono" id="evCounter">1/6</span>
+          <span class="text-sm text-midgrey f-mono" id="evCounter">1/4</span>
           <button type="button" id="evPrev" class="arrow-btn border border-charcoal/15 hover:bg-charcoal hover:text-paper" aria-label="Previous">
             <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M2 7L6.5 2.5M2 7L6.5 11.5" stroke="currentColor" stroke-width="1.2"/></svg>
           </button>
@@ -414,45 +494,33 @@
 
       <div class="ev-track" id="evTrack">
         <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
-          <p class="label text-stone">Open Call</p>
-          <div>
-            <p class="f-display text-[1.3rem] leading-snug mb-3">Open Call Launch</p>
-            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">June 22</p>
-          </div>
-        </div>
-        <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
-          <p class="label text-stone">Open Call</p>
-          <div>
-            <p class="f-display text-[1.3rem] leading-snug mb-3">Artist Notification</p>
-            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">July 27</p>
-          </div>
-        </div>
-        <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
-          <p class="label text-stone">Press</p>
-          <div>
-            <p class="f-display text-[1.3rem] leading-snug mb-3">Press Conference</p>
-            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">August 5</p>
-          </div>
-        </div>
-        <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
           <p class="label text-stone">Reception</p>
           <div>
-            <p class="f-display text-[1.3rem] leading-snug mb-3">Exhibition Opening</p>
-            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">August 7</p>
+            <p class="f-display text-[1.3rem] leading-snug mb-2">Opening Reception</p>
+            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey mb-4">August 7 · 6:00–9:00 PM · Gallery 456</p>
+            <a href="https://luma.com/krzzq87u" target="_blank" rel="noopener" class="f-mono text-[.72rem] uppercase tracking-[.1em] border-b border-white/40 hover:border-white pb-px transition-colors duration-300">RSVP</a>
+          </div>
+        </div>
+        <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
+          <p class="label text-stone">Exhibition</p>
+          <div>
+            <p class="f-display text-[1.3rem] leading-snug mb-2">Traces of Force</p>
+            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey mb-4">August 7–21 · Gallery 456</p>
+            <a href="2026-edition.html" class="f-mono text-[.72rem] uppercase tracking-[.1em] border-b border-white/40 hover:border-white pb-px transition-colors duration-300">Explore Exhibition</a>
           </div>
         </div>
         <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
           <p class="label text-stone">Workshop</p>
           <div>
             <p class="f-display text-[1.3rem] leading-snug mb-3">Public Talks &amp; Workshops</p>
-            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">August 15</p>
+            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">August 15 · Details to be announced</p>
           </div>
         </div>
         <div class="ev-card w-[17rem] md:w-[20rem] h-[20rem] md:h-[22rem] rounded-[1.25rem] relative overflow-hidden bg-charcoal text-paper p-6 flex flex-col justify-between">
           <p class="label text-stone">Community</p>
           <div>
             <p class="f-display text-[1.3rem] leading-snug mb-3">Closing Event</p>
-            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">August 21</p>
+            <p class="f-mono text-[.72rem] uppercase tracking-[.1em] text-midgrey">August 21 · Details to be announced</p>
           </div>
         </div>
       </div>
@@ -484,12 +552,14 @@
   <section id="partners" class="bg-paper border-t border-ash scroll-mt-[5.5rem]">
     <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-12 md:py-16">
       <p class="label mb-8">Partners &amp; Supporters</p>
-      <div class="flex flex-wrap items-center gap-x-12 gap-y-4">
+      <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-10">
         <span class="f-display text-[.95rem]">Lighthouse Global Foundation Inc.</span>
         <a href="https://lmcc.net/resources/manhattan-arts-grants/creative-engagement/" target="_blank" rel="noopener" class="f-display text-[.95rem] footer-link">LMCC</a>
         <a href="http://www.caacarts.org/" target="_blank" rel="noopener" class="f-display text-[.95rem] footer-link">Chinese American Arts Council / Gallery 456</a>
-        <span class="f-mono text-[.75rem] uppercase tracking-[.1em] text-midgrey">Other Partners TBD</span>
       </div>
+      <p class="text-[.82rem] text-graphite/70 leading-relaxed max-w-3xl border-t border-ash pt-8">
+        This project is made possible in part with funds from Creative Engagement, a regrant program supported by the New York City Department of Cultural Affairs in partnership with the City Council, and the New York State Council on the Arts with the support of the Office of the Governor and the New York State Legislature, and administered by the Lower Manhattan Cultural Council.
+      </p>
     </div>
   </section>
 
@@ -501,7 +571,7 @@
         <svg width="30" height="30" viewBox="0 0 36 36" fill="none" class="shrink-0"><path d="M8 28L28 8M28 8H12M28 8V24" stroke="currentColor" stroke-width="1.4"/></svg>
       </div>
 
-      <p class="text-[.92rem] text-ash/70 max-w-md mb-8">Receive open call updates, exhibition announcements, artist features, and public program information.</p>
+      <p class="text-[.92rem] text-ash/70 max-w-md mb-8">Receive exhibition updates, artist features, public-program announcements, and news from New York Asian Design Week.</p>
 
       <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4">
         <input type="email" id="newsletterEmail" required placeholder="Email address" class="w-full rounded-xl px-5 py-4 text-paper sm:flex-1" />
@@ -522,22 +592,19 @@
 <footer class="bg-inkblack text-paper">
   <div class="max-w-[1800px] mx-auto px-6 md:px-12 pt-14 md:pt-20 pb-10">
     <div class="flex flex-wrap items-start justify-between gap-10">
-      <div class="flex items-center gap-2.5">
-        <span class="w-2 h-2 rounded-full" style="background:radial-gradient(circle at 50% 32%, var(--paper) 0%, var(--paper) 55%, transparent 100%);"></span>
-        <span class="f-display text-[1.05rem]">NYADW<span class="text-midgrey ml-1">/26</span></span>
-      </div>
+      <div><img src="Images/LOGO/LOGO_SQ_BLR.jpg" alt="NYADW" class="h-12 w-auto" /></div>
 
       <div class="flex flex-wrap gap-16">
         <div>
           <p class="label mb-4">Pages</p>
           <ul class="space-y-2 text-[.92rem]">
             <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="2026-edition.html" class="footer-link">2026 Edition</a></li>
             <li><a href="open-call.html" class="footer-link">Open Call</a></li>
-            <li><a href="theme-2026.html" class="footer-link">Theme 2026</a></li>
-            <li><a href="about.html" class="footer-link">About NYADW</a></li>
-            <li><a href="events.html" class="footer-link">Events</a></li>
-            <li><a href="partners.html" class="footer-link">Partners</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="#about" class="footer-link">About NYADW</a></li>
+            <li><a href="#events" class="footer-link">Events</a></li>
+            <li><a href="#host" class="footer-link">Partners</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -556,7 +623,7 @@
         </div>
       </div>
 
-      <a href="contact.html" class="pill-btn border border-white/30 hover:bg-white hover:text-inkblack">Contacts</a>
+      <a href="#contact" class="pill-btn border border-white/30 hover:bg-white hover:text-inkblack">Contact</a>
     </div>
 
     <div class="border-t border-white/10 mt-12 pt-12">
@@ -613,6 +680,19 @@
   evPrev.addEventListener('click', () => scrollToCard(evIndex - 1));
   evNext.addEventListener('click', () => scrollToCard(evIndex + 1));
   updateEvCounter();
+
+  const wkTrack = document.getElementById('wkTrack');
+  const wkPrev  = document.getElementById('wkPrev');
+  const wkNext  = document.getElementById('wkNext');
+  function scrollWks(dir) {
+    const card = wkTrack.querySelector('a');
+    if (!card) return;
+    const gap  = parseFloat(getComputedStyle(wkTrack).gap) || 20;
+    const step = card.getBoundingClientRect().width + gap;
+    wkTrack.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+  wkPrev.addEventListener('click', () => scrollWks(-1));
+  wkNext.addEventListener('click', () => scrollWks(1));
 
   const newsletterForm = document.getElementById('newsletterForm');
   const newsletterSuccess = document.getElementById('newsletterSuccess');
